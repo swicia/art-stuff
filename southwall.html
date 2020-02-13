@@ -287,7 +287,9 @@ body {
 }
 
 
-
+.too-small{
+	display: none;
+}
 
 
 p{
@@ -329,6 +331,49 @@ p a:hover{
 	padding: 5px 10px;
 }
 
+/*small devices*/
+@media only screen 
+  and (min-device-width: 0px) 
+  and (max-device-width: 640px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+
+	body{
+		background-color: #C5C5C5;
+	}
+
+	.parent{
+		display: none;
+	}
+
+	#draggable{
+		display: none;
+	}
+
+	.too-small{
+		display: block;
+		font-size: 3.5vh;
+		line-height: 4.5vh;
+		letter-spacing: .05em;
+		margin: 0 auto;
+		color: #9FFF00;
+		text-shadow: 
+		    0 0  5px #fff, 
+		    0 0  10px #fff, 
+		    0 0  15px #fff, 
+		    0 0  20px #0f0, 
+		    0 0  35px #0f0, 
+		    0 0  40px #0f0, 
+		    0 0  60px #0f0, 
+		    0 0  90px #0f0 ;
+		font-family: sans-serif;
+		font-weight: 100;
+		width: 95%;
+		margin-top: 10%;
+	}
+
+}
+
 
 
 </style>
@@ -344,9 +389,6 @@ p a:hover{
 		<p>Recreation of <i>South Wall (#11)</i>.<br> Original by <a href="https://en.wikipedia.org/wiki/Norman_Zammitt" target="_blank">Norman Zammitt</a>, 1975. </p>
 		</div><!--end fixed-->
 	</div><!--end draggable-->
-
-
-
 <div class="parent">
 	<div class="A1"></div>
 	<div class="A2"></div>
@@ -394,10 +436,11 @@ p a:hover{
 	<div class="A44"></div>
 	<div class="A45"></div>
 	<div class="A46"></div>
-
-
 </div><!--end parent2-->
-	
 
-
+<!--media query-->
+<div class="too-small">
+	please open this website on something larger for the intended viewing experience :-)
+</div>
 </body>
+</html>
